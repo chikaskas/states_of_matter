@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>States of matter simulator!</title>
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+                background-color: white;
+                overflow: hidden;
+            }
+            canvas {
+                width: 100%;
+                aspect-ratio: 2;
+                background-color: black;
+            }
+            html * {
+                margin: 0px;
+            }
+            div * {
+                display: inline-block;
+            }
+            input {
+                width: 60%;
+            }
+            p {
+                width: 15%;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h4>
+            Adjust the temperature and pressure to change the state of matter! 
+            Wathc them change states from an expansive gas, to a chaotic liquid to a stable solid. 
+            See if you can make the solid as smooth as possible using your metallurgy skills! 
+            Melting point: 0, Boiling point: 1
+        </h4>
+        
+        <canvas id="canvas", width="2048", height="1024"></canvas>
+
+        <div>
+        <p class="static">Temperature:</p>
+        <p class="dynamic">1</p>
+        <input id="temperature" class="input" type="range" min="0" max="2" step="0.1" value="1">
+        </div>
+
+        <div>
+            <p class="static">Pressure:</p>
+            <p class="dynamic">0</p>
+            <input id="pressure" class="input" type="range" min="0" max="10" step="0.1" value="0">
+        </div>
+
+        <div>
+            <p class="static">Frame rate: </p>
+            <p class="dynamic" id="frame_rate">0</p>
+        </div>
+
+    </body>
+    <script src="main.js"></script>
+</html>
